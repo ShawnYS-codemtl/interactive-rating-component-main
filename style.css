@@ -12,7 +12,7 @@ body {
 }
 
 .rating-state {
-    background-color:#252d37;
+    background-color:#232831;
     color: white;
     border-radius: 10px;
     margin: 0 auto;
@@ -21,10 +21,16 @@ body {
     padding: 20px;
 }
 
-.rating-state img {
+.rating-state #star {
     border-radius: 50%;
     padding: 13px;
-    background-color:#7c8798;
+    background-color:#252d37;
+}
+
+#thanks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .rating-state h4 {
@@ -44,6 +50,7 @@ body {
 .ratings button {
     color: #7c8798;
     border-radius: 50%;
+    background-color: #252d37;
     width: 40px;
     height: 40px;
     border: none;
@@ -60,5 +67,24 @@ body {
     padding: 10px;
     border: none;
 }
+
+button:hover {
+    cursor: pointer;
+    background-color: #fb7413;
+    transform: scale(1.02);
+    color: white;
+}
+
+.but:visited {
+    color: #7c8798;
+    background-color: #252d37;
+}
+
+.but:focus {
+    color: white;
+    background-color: #959eac;
+}
+
+
 
 
