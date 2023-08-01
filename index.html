@@ -26,7 +26,7 @@
         <button class="but" onclick="storeVar(this)" value="4">4</button>
         <button class="but" onclick="storeVar(this)" value="5">5</button>
       </div>
-      <button id="submit">S U B M I T</button>
+      <button id="submit" onclick="submit_rating()">S U B M I T</button>
       
   </div>
 
@@ -43,7 +43,34 @@
 
   Thank you state end 
   -->
-  <script src=”script.js”></script>
+  <script > 
+    const submit_btn = document.querySelector('#submit');
+
+
+    var rating = 0;
+
+    function storeVar(el) {
+        rating = el.value;
+        window.alert('You chose ' + rating );
+      } 
+
+    function submit_rating(){ 
+      if (rating === 0) {
+        window.alert('Please provide feedback before pressing SUBMIT');
+      }
+      else{
+        const newP = document.createElement('p');
+        const pContent = 'You selected' + rating + 'out of 5';
+        newP.textContent = pContent;
+        const parent = document.getElementById('#thanks');
+        parent.insertBefore(newP, parent.firstChild);
+
+        window.location.href='thankyou.html';
+      }
+    }
+
+    submit_btn.addEventListener('click', submit_rating);
+  </script>
   
 </body>
 </html>
